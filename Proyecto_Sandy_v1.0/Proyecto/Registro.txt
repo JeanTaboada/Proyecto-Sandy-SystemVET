@@ -1,0 +1,77 @@
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.*;
+
+public class Registro extends JFrame implements ActionListener{
+
+private JLabel label1, label2, label3, label4;
+private JTextField textfield1, textfield2, textfield3;
+private JButton boton1, boton2;
+
+public Registro(){
+setLayout(null);
+setTitle("REGISTRO - Sandy PET");
+getContentPane().setBackground(new Color(255,175,175));
+setIconImage(new ImageIcon(getClass().getResource("images/icono-sp.png")).getImage());
+
+ImageIcon imagen = new ImageIcon("images/logo-sp-jt.png");
+label4 = new JLabel(imagen);
+label4.setBounds(50,170,300,180);
+add(label4);
+
+label1 = new JLabel("Nombre/Dueño(a)");
+label1.setBounds(50,10,100,30);
+add(label1);
+
+label2 = new JLabel("Nombre/Mascota");
+label2.setBounds(50,40,100,30);
+add(label2);
+
+label3 = new JLabel("Tipo/Raza");
+label3.setBounds(50,70,100,30);
+add(label3);
+
+textfield1 = new JTextField();
+textfield1.setBounds(160,10,120,30);
+add(textfield1);
+
+textfield2 = new JTextField();
+textfield2.setBounds(160,40,120,30);
+add(textfield2);
+
+textfield3 = new JTextField();
+textfield3.setBounds(160,70,120,30);
+add(textfield3);
+
+boton1 = new JButton("CONSULTA");
+boton1.setBounds(50,120,100,30);
+boton1.addActionListener(this);
+add(boton1);
+
+boton2 = new JButton("GENERAR CITA");
+boton2.setBounds(160,120,160,30);
+boton2.addActionListener(this);
+add(boton2);
+}
+public void actionPerformed(ActionEvent e){
+if(e.getSource()==boton1){
+JOptionPane.showMessageDialog(null,"Abriendo la ventana de Consultas...");
+Consultas consultas1 = new Consultas();
+consultas1.setBounds(0,0,450,450);
+consultas1.setVisible(true);
+consultas1.setResizable(false);
+consultas1.setLocationRelativeTo(null);
+this.setVisible(false);
+}
+if(e.getSource()==boton2){
+
+}
+}
+public static void main(String args[]){
+Registro registro1 = new Registro();
+registro1.setBounds(0,0,450,450);
+registro1.setVisible(true);
+registro1.setResizable(false);
+registro1.setLocationRelativeTo(null);
+}
+}

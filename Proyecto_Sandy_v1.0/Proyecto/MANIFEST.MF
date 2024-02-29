@@ -1,0 +1,4 @@
+Maniefest-Version: 1.0
+Created-By: Jean Taboada Peralta
+Main-Class: Bienvenida
+X-COMMENT: Primera Version de Registro de Cita y Registro de Consulta en pantalla sin BD

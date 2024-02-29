@@ -1,0 +1,51 @@
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.*;
+
+public class Consultas extends JFrame implements ActionListener{
+
+private JLabel label1, label2, label3;
+private JTextArea textarea1;
+private JButton boton1;
+
+public Consultas(){
+setLayout(null);
+setTitle("REGISTRAR CONSULTAS");
+getContentPane().setBackground(new Color(255,175,175));
+setIconImage(new ImageIcon(getClass().getResource("images/icono-sp.png")).getImage());
+
+label1 = new JLabel("Nombre/Dueño");
+label1.setBounds(100,10,120,30);
+add(label1);
+
+label2 = new JLabel("Nombre/Mascota");
+label2.setBounds(100,40,120,30);
+add(label2);
+
+label3 = new JLabel("Tipo/Raza");
+label3.setBounds(100,70,120,30);
+add(label3);
+
+textarea1 = new JTextArea();
+textarea1.setBounds(100,120,250,200);
+add(textarea1);
+
+boton1 = new JButton("Registrar Consulta");
+boton1.setBounds(160,330,160,30);
+boton1.addActionListener(this);
+add(boton1);
+}
+public void actionPerformed(ActionEvent e){
+if(e.getSource()==boton1){
+
+
+ }
+}
+public static void main(String args[]){
+Consultas consultas1 = new Consultas();
+consultas1.setBounds(0,0,450,450);
+consultas1.setVisible(true);
+consultas1.setResizable(false);
+consultas1.setLocationRelativeTo(null);
+ }
+}
